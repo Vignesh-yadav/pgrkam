@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jobsportal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <div id="logo">
+        <img class="logoimg" src="logo.png" alt="pgrkam logo">
+    </div>
+    <div class="titlebox"> 
+      <p class="title">PUNJAB GHAR GHAR ROZGAR</p>
+      <p class="discription">Department of Employment Generation,
+        Skill Development & Training- Govt. Of Punjab, India</p>
+    </div>
+    <ul class="menu-list"> 
+       <li class="menu"><a href="index.html">Home</a></li>
+       <li class="menu"><a href="aboutus.html">About us</a></li>
+       <li class="menu"><a href="contactus.html">Contact us</a></li>
+       <li class="menu" style="margin-right: 5px;" onclick="generatemenu();"> <a href="#"><img src="menu.png"> </a></li>
+      
+    </ul>
+    </nav>
+
+   <div class="js-menuitems">
+
+   </div>
+
+<div class="input">
+ 
+ <button id="search-input" class="search-button">search</button>
+ 
+ <input class="inputelement" placeholder="search for a job">
+         <button id="voice-search-button" class="voicesearch"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEX///8AAAD6+vrFxcWnp6fd3d3v7++4uLj5+fnx8fHj4+Otra3BwcHp6ekVFRUqKip3d3dBQUFdXV1qamqQkJDR0dGfn5+zs7NMTExWVlaGhoYzMzMRERFjY2NJSUk7OzshISF9fX0uLi6ZmZnMzMxe28IbAAAGpElEQVR4nO2d6XbqOgxG60AGpjBTplKgvP8znnLO7W0pkmxHchyvpf07BH8klmTZSC8vLVGM+/vt4Xw0x/Nhu++Pi7a+uBUG5exgfnOYlYPYAxOit6yf5P2jXvZiD06A8vnpPTzJMvYAmYzPpL4753HsQTIYvln13Xkbxh5oU0ZO+u6MYg+1EdnSWaAxyyz2cP0p5h4CjZkn5x8nUy+BxkwnsYfsR+Gp705ST7HAfDxFnZDEym8OfjGvYg/cGR8r+pNl7IG74u4Hf5OIXxw2FmhMGtHNgqFwEXvwLowZAo1JIAzPfF39I9Puh28lS6Ax3V8v8h7h50OMLcBGjynQmK4nNtzWvBRvsSXQDNgCjel2Bo5rZ+5029Y0jUh/0unoNKNTh24cuuwSOSHpN10OTiWmYbcn4kpE4Sq2DIKZiMJZbBkEJxGFp9gyCLhB6T86HJpmRxGFx+66i0xEoDGqMB6qUBWqwvioQlWoCuOjClWhKoyPKlSFqjA+qlAVqsL4qEJVqArjowpVoSqMjypUhaowPqpQFarC+KhCVagK46MKVaEqjI8qVIWqMD6qUBWqwvioQlWoCuOjClWhKoyPKlSFqjA+qlAVqsL4qMIOKsw3/SeIyiMtKCyfB7TJGQpfga8nqla0oBCqvPHKUAjVJnsnFIavGvEOXM+pf7YG7ncmrg9f+QOqgL5mKMyhAXi+Q/74zgPOPAQLHhMKg1fgARVy6g9XngqDV1ECFXLKD4MKicLbkO31h7CNE3GFkHEkiqgGr2YGlX89skpIb4E79vHLq6uAwCsx4j5w/ZYjEDQdF+J6fulLuvjlBbieVxoMMh2Ey2cUuv6GKnkNOXxeeTewiB5xfZN6+r+hjD90Pa9EH+jyqS4GO7bAHXF30JRyHD5yS+pH49W6vkPVuwZfKV7bCLBcJ1lgtElXhJ/U1M2h8qjcYqDQPcmaeFxbQ5bWhyJ7bkFXMEqh3vyM9xBr6omAVoGzOkRvuqE+wYvcyPFuoE/wDM0LPK8ocwfHQa7Q8QlkqMl56wRY+5g0X+Bjd4R8IKBh59dVBl86OowAXyYnyNcfXptxpyHywx3pzzTtcGHpbgFmgQSaKIGZiRv5kYG9nxzEma7GfoM+I1GvFlqw2Irfgw/eiuVxgOsWYinnDBxMW2puN7E2FrMPr65FekSBv51tUQblIWlsOUEwyyXTSAEuQ25ztEO/2Ka2FWKH3wqZ4uYD0IZZ/dDAZyG1s7Z8AP3yUahTBJwFtUdL7rlF+zIdfoRStc3hOU6Hbn9Zu/Vfmzuk5eEXQqzHAOzBXeaAy1rKpRUZbAvk+l8htt/FUmcb2vufNy4LWCT9w15WfAMvF9yC3myEm5zdyG2BDrc+4SVKH0F6HLm2EJtsoPd8sXGNKZHkj2jfJMRkeBjrdf9y+nI7x9Ol77HphzQgmvvLIACjXjo5DJIVk8I7cwSlgY0t+vcGSde30WwD2ZSU7nyFrRbCd53EHI54d10sQBF+V55A5keAZjQVFkkLOiUAbBlWB+g7i4YnISWi68wgswNz3MdwEnPsgI5DUNwAvC9eKIl4piBQfz18X4lzZgcHzxME68eKH5fhZy2fwbcHwnnhCj/VJW+88fXzNGD/biK/9CZ7KDQjzjyEmRP/QaxoD5JfvCYaKQYOoy74N5u92LfsiW+hDruIQO1JTGXcRk4d4gzfubsis0srvqMakCm6eUAr8wW9J1FzZ8mIziSLryggLHsSB05yoWdp1Ro2zP8f27bLtmnIMbZtkLck0GHb5dD3n4+DvrXVblBH+Ih986ze+/3e+d6+k9PaE/w7IOtwPldVK9ch5SuXvzG0KvBzUE4b2dfVzZYYL24rp2O355YFfjoNt10XY06XcQ47sSofX1z/vzBvxU38wmN/sL7u9q/j23pYVC9VMVzfxq/73dVjDzXMmt4KFT3KIhfxeiJx5tmF8ElZFDJGlkIonm+KzP+AKKJ36eYfe6YJlnRyp+AfXsfZiZwIYiPzbyeIECm8ZlyC6Auer/Ahl39Vd3FN6DOlrOOYypznkqVsdqoU4txFfXdKZMfdk/eu6rtjzUPYaZwDaYucF497pgYiUTZ9kNsuv56PDD/8/5l/+hA7adgOk3LmvsKtZ2WMNTybav3h8s+Lxce6hVR9OAa9zQJzlOfFphdoR75lsFM/oU8btQdyeFP2+GRUVGH6qML0UYXpowrTRxWmjypMH1WYPqowfVRh+qjC9FGF6aMK00cVpo8qTB9VmD6qMH1UYfqowvSJqvAPeztg0q5BAUcAAAAASUVORK5CYII="  style="height: 35px; border-radius: 35px; padding: 1.5px;"  alt="voice search"> </button>
+          </div>   
+    
+
+    
+
+<ul id="results"></ul>
+
+<div class="blocks">
+    <div class="block">
+      <h2>Available Govt Jobs</h2>
+      <p class="number">28121</p>
+  </div>
+  <div class="block">
+      <h2>Available Private Jobs</h2>
+      <p class="number">85415</p>
+  </div>
+  <div class="block">
+      <h2>Regestered Job Seekers</h2>
+      <p class="number">1979357</p>
+  </div>
+  <div class="block">
+      <h2>Registered Employers</h2>
+      <p class="number">17075</p>
+  </div>
+  </div>
+
+  <div class="category">
+    <img src="icon1.png" alt="Category 1">
+    <div class="category-title">Jobs</div>
+</div>
+
+<div class="category">
+    <img src="icon2.png" alt="Category 2">
+    <div class="category-title">Skill Training</div>
+</div>
+
+<div class="category">
+    <img src="icon3.png" alt="Category 3">
+    <div class="category-title">Self Employement</div>
+</div>
+
+<div class="category">
+    <img src="icon4.png" alt="Category 4">
+    <div class="category-title">Local Services</div>
+</div>
+
+<div class="category">
+    <img src="icon5.png" alt="Category 5">
+    <div class="category-title">Jobs For Women</div>
+</div>
+
+<div class="category">
+    <img src="icon6.png" alt="Category 6">
+    <div class="category-title">Jobs For Persons With Disability</div>
+</div>
+
+<div class="category">
+    <img src="icon7.png" alt="Category 7">
+    <div class="category-title">Induction Into Armed Forces</div>
+</div>
+
+<div class="category">
+    <img src="icon8.png" alt="Category 8">
+    <div class="category-title">Counselling</div>
+</div>
+
+    <div class style="margin-top: 70px;">
+
+        <hr style="margin-top: 70px;">
+
+<div class="footer">
+
+    <pre>       
+          © 2023,
+
+        All Rights Reserved by Punjab Ghar Ghar Rozgar
+
+        and Karobar Mission, Punjab, India PGRKAM
+
+        Website Visit Count:12060800
+
+        Created By Drish infotech Ltd.
+        
+    </pre>
+
+</div>
+
+<script src="script.js"></script>
+</div>
+
+
+</body>
+</html>

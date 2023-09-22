@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        .okokok {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .signup-container {
+            width: 350px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .signup-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .signup-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img class="logoimg" src="logo.png" alt="pgrkam logo">
+        </div>
+        <div class="titlebox"> 
+          <p class="title">PUNJAB GHAR GHAR ROZGAR</p>
+          <p class="discription">Department of Employment Generation,
+            Skill Development & Training- Govt. Of Punjab, India</p>
+        </div>
+        <ul class="menu-list"> 
+           <li class="menu"><a href="index.html">Home</a></li>
+           <li class="menu"><a href="aboutus.html">About us</a></li>
+           <li class="menu"><a href="contactus.html">Contact us</a></li>
+           <li class="menu" style="margin-right: 5px;" onclick="generatemenu();"> <a href="#"><img src="menu.png"> </a></li>
+          
+        </ul>
+        </nav>
+
+        <div class="js-menuitems">
+
+        </div>
+     
+
+<div class="okokok">
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="new-username">New Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+            </div>
+            <div class="form-group">
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+            </div>
+            <button type="submit" class="signup-button">Sign Up</button>
+        </form>
+    </div>
+</div>
+    <script>
+        const signupForm = document.getElementById('signup-form');
+        signupForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            
+            const newUsername = document.getElementById('new-username').value;
+            const newPassword = document.getElementById('new-password').value;
+
+        
+            alert(`Account created successfully!\nUsername: ${newUsername}\nPassword: ${newPassword}`);
+        });
+    </script>
+
+
+<hr style="margin-top: 70px;">
+<div class="footer">
+
+    <pre>            © 2023,
+
+        All Rights Reserved by Punjab Ghar Ghar Rozgar
+
+        and Karobar Mission, Punjab, India PGRKAM
+
+        Website Visit Count:12060800
+
+        Created By Drish infotech Ltd.
+        
+    </pre>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #ffd500;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img class="logoimg" src="logo.png" alt="pgrkam logo">
+        </div>
+        <div class="titlebox"> 
+          <p class="title">PUNJAB GHAR GHAR ROZGAR</p>
+          <p class="discription">Department of Employment Generation,
+            Skill Development & Training- Govt. Of Punjab, India</p>
+        </div>
+        <ul class="menu-list"> 
+           <li class="menu"><a href="index.html">Home</a></li>
+           <li class="menu"><a href="aboutus.html">About us</a></li>
+           <li class="menu"><a href="contactus.html">Contact us</a></li>
+           <li class="menu" style="margin-right: 5px;" onclick="generatemenu();"> <a href="#"><img src="menu.png"> </a></li>
+          
+        </ul>
+        </nav>
+
+        <div class="js-menuitems">
+
+        </div>
+     
+
+
+    <div class="header">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div class="container">
+        <h2>Contact Information</h2>
+        <p>If you have any questions or need assistance, please feel free to contact us:</p>
+        <ul>
+            <li>Email: <a href="mailto: pgrkam.degt@gmail.com"> pgrkam.degt@gmail.com</a></li>
+            <li>Phone: 0172-2720152 </li>
+            <li>Address: Punjab Skill Development Mission, </li>
+        </ul>
+
+        <h2>Location</h2>
+        <p>Find us on the map:</p>
+        <div class="map-container">
+            <iframe
+                src="https://maps.app.goo.gl/CAQ1W6aLnDZ9uevZA"
+                width="600"
+                height="450"
+                frameborder="0"
+                style="border: 0;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0">
+            </iframe>
+        </div>
+    </div>
+
+
+    <hr style="margin-top: 70px;">
+    <div class="footer">
+    
+        <pre>            © 2023,
+
+            All Rights Reserved by Punjab Ghar Ghar Rozgar
+    
+            and Karobar Mission, Punjab, India PGRKAM
+    
+            Website Visit Count:12060800
+    
+            Created By Drish infotech Ltd.
+            
+        </pre>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

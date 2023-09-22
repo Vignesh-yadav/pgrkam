@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img class="logoimg" src="logo.png" alt="pgrkam logo">
+        </div>
+        <div class="titlebox"> 
+          <p class="title">PUNJAB GHAR GHAR ROZGAR</p>
+          <p class="discription">Department of Employment Generation,
+            Skill Development & Training- Govt. Of Punjab, India</p>
+        </div>
+        <ul class="menu-list"> 
+           <li class="menu"><a href="index.html">Home</a></li>
+           <li class="menu"><a href="aboutus.html">About us</a></li>
+           <li class="menu"><a href="contactus.html">Contact us</a></li>
+           <li class="menu" style="margin-right: 5px;" onclick="generatemenu();"> <a href="#"><img src="menu.png"> </a></li>
+          
+        </ul>
+        </nav>
+
+        <div class="js-menuitems">
+
+        </div>     
+
+    <div class="container">
+        <h2>Job Application Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="jobType">Job Type:</label>
+                <input type="text" id="jobType" placeholder="Enter job type">
+            </div>
+            <div class="form-group">
+                <label for="qualification">Qualification:</label>
+                <input type="text" id="qualification" placeholder="Enter qualification">
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience:</label>
+                <input type="text" id="experience" placeholder="Enter experience">
+            </div>
+            <div class="form-group">
+                <label for="jobPlace">Job Place:</label>
+                <input type="text" id="jobPlace" placeholder="Enter job place">
+            </div>
+            <div class="form-group">
+                <label for="jobTitle">Job Title/Organization Name:</label>
+                <input type="text" id="jobTitle" placeholder="Enter job title or organization name">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <hr style="margin-top: 70px;">
+
+    <div class="footer">
+    
+        <pre>            © 2023,
+    
+            All Rights Reserved by Punjab Ghar Ghar Rozgar
+    
+            and Karobar Mission, Punjab, India PGRKAM
+    
+            Website Visit Count:12060800
+    
+            Created By Drish infotech Ltd.
+            
+        </pre>
+    
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

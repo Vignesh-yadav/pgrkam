@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chatbot Javascript </title>
+<style> * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    .okokok {
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    padding: 10em 10em;
+    background: url(./bg.jpg);
+    opacity: 0.5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: 100% 20%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .glass {
+    width: 500px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    color: #000;
+    border-radius: 9px;
+    backdrop-filter: blur(50px);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.3);
+    line-height: 1.5;
+    transform: translatey(-5%);
+    transition: transform 0.5s;
+    }
+    .glass-1 {
+    width: 500px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    color: rgb(122, 82, 82);
+    border-radius: 9px;
+    backdrop-filter: blur(50px);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.3);
+    line-height: 1.5;
+    transform: translatey(-5%);
+    transition: transform 0.5s;
+    font-size: 1.7rem;
+    }
+    .glass h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    }
+    .glass h2 {
+    font-size: 1rem;
+    margin-top: 20px;
+    }
+    .input {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    margin-top: 40px;
+    }
+    .input input {
+    width: 100%;
+    height: 70px;
+    border: none;
+    padding-left: 30px;
+    padding-top: 0;
+    outline: none;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    }
+    .glass p {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    }
+    
+    * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.okokok {
+width: 100vw;
+height: 100vh;
+font-family: sans-serif;
+padding: 10em 10em;
+background: url(./bg.jpg);
+opacity: 0.5;
+background-position: center;
+background-repeat: no-repeat;
+background-position: 100% 20%;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.glass {
+width: 500px;
+height: 400px;
+background-color:  rgb(222, 157, 6);
+padding: 50px;
+color: #000;
+border-radius: 9px;
+backdrop-filter: blur(50px);
+border: 2px solid transparent;
+background-clip: padding-box;
+box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.3);
+line-height: 1.5;
+transform: translatey(-5%);
+transition: transform 0.5s;
+}
+.glass-1 {
+width: 500px;
+height: 400px;
+background-color: orange;
+padding: 50px;
+color: rgb(122, 82, 82);
+border-radius: 9px;
+backdrop-filter: blur(50px);
+border: 2px solid transparent;
+background-clip: padding-box;
+box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.3);
+line-height: 1.5;
+transform: translatey(-5%);
+transition: transform 0.5s;
+font-size: 1.7rem;
+}
+.glass h1 {
+font-size: 1.5rem;
+text-align: center;
+}
+.glass h2 {
+font-size: 1rem;
+margin-top: 20px;
+}
+.input {
+width: 100%;
+height: 70px;
+overflow: hidden;
+margin-top: 40px;
+}
+.input input {
+width: 100%;
+height: 70px;
+border: none;
+padding-left: 30px;
+padding-top: 0;
+outline: none;
+font-size: 1.5rem;
+border-radius: 20px;
+}
+.glass p {
+font-size: 1.6rem;
+margin-top: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.okokok {
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  padding: 10em 10em;
+  background: url(./bg.jpg);
+  opacity: 0.5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: 100% 20%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+</style>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img class="logoimg" src="logo.png" alt="pgrkam logo">
+        </div>
+        <div class="titlebox"> 
+          <p class="title">PUNJAB GHAR GHAR ROZGAR</p>
+          <p class="discription">Department of Employment Generation,
+            Skill Development & Training- Govt. Of Punjab, India</p>
+        </div>
+        <ul class="menu-list"> 
+           <li class="menu"><a href="index.html">Home</a></li>
+           <li class="menu"><a href="aboutus.html">About us</a></li>
+           <li class="menu"><a href="contactus.html">Contact us</a></li>
+           <li class="menu" style="margin-right: 5px;" onclick="generatemenu();"> <a href="#"><img src="menu.png"> </a></li>
+          
+        </ul>
+        </nav>
+
+        <div class="js-menuitems">
+
+        </div>
+     
+
+<div class="okokok">
+<div class="glass">
+<h1>Chat Bot At Your Service</h1>
+<h2>Drop Your Question</h2>
+<div class="input">
+<input
+type="text"
+id="userBox"
+onkeydown="if(event.keyCode == 13){ talk()}"
+placeholder="Type your Question"
+/>
+</div>
+<p id="chatLog">Answer Appering Hear</p>
+</div>
+</div>
+
+<hr style="margin-top: 70px;">
+<div class="footer">
+
+    <pre>            © 2023,
+
+        All Rights Reserved by Punjab Ghar Ghar Rozgar
+
+        and Karobar Mission, Punjab, India PGRKAM
+
+        Website Visit Count:12060800
+
+        Created By Drish infotech Ltd.
+        
+    </pre>
+
+</div>
+<script src="script.js"></script>
+<script>
+
+function talk(){
+var know = {
+"Who are you" : "Hello, pgrkam assistant here ",
+"How are you" : "Good :)",
+"What can i do for you" : "Please share this website",
+"Your followers" : "I have my family of 5000 members, i don't have follower ,have supportive Famiy ",
+"ok" : "Thank You So Much ",
+"Bye" : "Okay! Will meet soon..",
+"hai" : "helo",
+"helo" : "helo how can i help you",
+"hello" : "hi",
+"hi" : "hai",
+"namaste" : "namaskaram",
+"what after signup" : "you need to login",
+"what is pgrkam" : "this is punjab governament's scheme to give atleast one job for every family belonging to punjab",
+"how can i regester" : "go to menu and you will see signup option click on it and complete the process",
+"What is the percentage of reservation for sc":"15%",
+
+"what is the percentage of reservation for st":"7.5%",
+
+"what percentage is reserved for obc":"27%",
+
+"what is the full form of pgrkam":"punjab ghar ghar rozger & karobar mission",
+
+};
+var user = document.getElementById('userBox').value;
+document.getElementById('chatLog').innerHTML = user + "<br>";
+if (user in know) {
+document.getElementById('chatLog').innerHTML = know[user] + "<br>";
+}else{
+document.getElementById('chatLog').innerHTML = "Sorry,I didn't understand <br>";
+}
+}
+
+</script>
+</body>
+</html>
