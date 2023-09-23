@@ -258,3 +258,27 @@ input[type="text"] {
     padding-top: 20px;
     border-top: 1px solid #ccc;
 }
+
+
+.video-testimonials {
+    background-color: rgb(222, 157, 6) ;
+    height: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-container {
+    height: 300px;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.video-slide {
+    display: none;
+    width: 100%;
+}
