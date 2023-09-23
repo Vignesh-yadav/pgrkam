@@ -56,3 +56,27 @@ document.querySelector('.js-menuitems').innerHTML =
   </div>
 </div>
 </div> `; }
+
+
+ const videoSlides = document.querySelectorAll('.video-slide');
+ let currentSlide = 0;
+ 
+ function showSlide(index) {
+     videoSlides[currentSlide].style.display = 'none';
+     videoSlides[index].style.display = 'block';
+     currentSlide = index;
+ }
+ 
+ function nextSlide() {
+     if (currentSlide < videoSlides.length - 1) {
+         showSlide(currentSlide + 1);
+     } else {
+         showSlide(0); 
+     }
+ }
+ 
+ 
+ showSlide(0);
+ 
+ 
+ setInterval(nextSlide, 5000);
